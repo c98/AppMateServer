@@ -1,6 +1,6 @@
 AppMateServer
 
-从仓库的名字可以知道，这是 AppMate 的服务端。
+从仓库的名字可以知道，这是 [AppMate](http://s17.mogucdn.com/new1/v1/fxihe/d0da31c875767324becb9e575f68fd34/A1c0b9eca4d2000802.appmate.png) 的服务端。
 
 它是一个基于 Websocket 的简易通讯服务器，编写语言为 `swift`。工程的 master 分支可在 **Xcode 8.2** 及以上编译，当前只能工作在 macOS(10.12+) 平台。
 

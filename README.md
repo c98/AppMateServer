@@ -40,4 +40,4 @@ Test.swift: 一个测试插件，用来订阅手机端发来的 log，进行信�
 ```
 
 ## 服务端通讯架构图
-![server_arch](http://s17.mogucdn.com/new1/v1/fxihe/dece8acaecbdae61d7627e99bcf2c4a8/A134a68ca4d2000802.server_arch.png)
+![server_arch](http://s17.mogucdn.com/new1/v1/fxihe/1f80350d24a6d62d90e8b4a4d5cae1b0/A16053bca4d2000802.server_arch.png)

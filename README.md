@@ -1,8 +1,13 @@
 AppMateServer
 
-从仓库的名字可以知道，这是 [AppMate](http://s17.mogucdn.com/new1/v1/fxihe/d0da31c875767324becb9e575f68fd34/A1c0b9eca4d2000802.appmate.png) 的服务端。
+这是 [AppMate](http://s17.mogucdn.com/new1/v1/fxihe/d0da31c875767324becb9e575f68fd34/A1c0b9eca4d2000802.appmate.png) 的服务端。
 
 它是一个基于 Websocket 的简易通讯服务器，编写语言为 `swift`。工程的 master 分支可在 **Xcode 8.2** 及以上编译，当前只能工作在 macOS(10.12+) 平台。
+
+**See Also**
+
+* [AppMateClient](https://github.com/c98/AppMateClient)
+* [AppMateBrowser](https://github.com/c98/AppMateBrowser)
 
 ### 前置说明
 AppMate 其实是我们小组内部的一个尝试，正式服务的 server 端是用 Nodejs 实现的。用 swift 重写这个项目的核心框架主要是想确认下知名 swift web 框架 [Perfect](https://github.com/PerfectlySoft/Perfect) 的使用手感和稳定性到底如何。其中 websocket 组件是基于官方 [PerfectlySoft/Perfect-WebSockets](https://github.com/PerfectlySoft/Perfect-WebSockets) 自行定制的 Event-Driven 版本，[Pull Request 见此](https://github.com/PerfectlySoft/Perfect-WebSockets/pull/1)。

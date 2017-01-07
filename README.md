@@ -5,9 +5,11 @@ AppMateServer
 它是一个基于 Websocket 的简易通讯服务器，编写语言为 `swift`。工程的 master 分支可在 **Xcode 8.2** 及以上编译，当前只能工作在 macOS(10.12+) 平台。
 
 ### 前置说明
-AppMate 其实是我们小组内部的一个尝试，正式服务的 server 端是用 Nodejs 实现的。用 swift 重写这个项目的核心框架主要是想确认下知名 swift web 框架 [Perfect](https://github.com/PerfectlySoft/Perfect) 的使用手感和稳定性到底如何。另外也想知道使用 swift 可以做到什么程度。
+AppMate 其实是我们小组内部的一个尝试，正式服务的 server 端是用 Nodejs 实现的。用 swift 重写这个项目的核心框架主要是想确认下知名 swift web 框架 [Perfect](https://github.com/PerfectlySoft/Perfect) 的使用手感和稳定性到底如何。其中 websocket 组件是基于官方 [PerfectlySoft/Perfect-WebSockets](https://github.com/PerfectlySoft/Perfect-WebSockets) 自行定制的 Event-Driven 版本，[Pull Request 见此](https://github.com/PerfectlySoft/Perfect-WebSockets/pull/1)。
 
-关于平台兼容性，这确实是一个问题。因为 [Swift Foundation](https://github.com/apple/swift-corelibs-foundation) 目前还处于早期阶段，[一些模块](https://github.com/apple/swift-corelibs-foundation/blob/master/Docs/Status.md)还没有做到完全跨平台，不幸的是在这个项目中会使用到其中的个别模块(e.g. `Stream`,`DateFormatter`)。另外用到了改版后的 [GCD](https://github.com/apple/swift-corelibs-libdispatch)，当前只能工作在 macOS(10.12+) 平台。
+尝试这个项目另外一点，其实也想知道使用 swift 可以做到什么程度，以及对比其他 server 端(e.g. Nodejs)的优劣势。
+
+最后是关于平台兼容性，这确实是一个问题。因为 [Swift Foundation](https://github.com/apple/swift-corelibs-foundation) 目前还处于早期阶段，[一些模块](https://github.com/apple/swift-corelibs-foundation/blob/master/Docs/Status.md)还没有做到完全跨平台，不幸的是在这个项目中会使用到其中的个别模块(e.g. `Stream`,`DateFormatter`)。另外用到了改版后的 [GCD](https://github.com/apple/swift-corelibs-libdispatch)，当前只能工作在 macOS(10.12+) 平台。
 
 ## 编译运行
 
@@ -40,4 +42,4 @@ Test.swift: 一个测试插件，用来订阅手机端发来的 log，进行信�
 ```
 
 ## 服务端通讯架构图
-![server_arch](http://s17.mogucdn.com/new1/v1/fxihe/1f80350d24a6d62d90e8b4a4d5cae1b0/A16053bca4d2000802.server_arch.png)
+![server_arch](http://s17.mogucdn.com/new1/v1/fxihe/3e151b71d90de94c3cf67891406d2193/A10ef391e4d2000802.server_arch.png)

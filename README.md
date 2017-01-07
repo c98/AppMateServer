@@ -1,4 +1,6 @@
-AppMateServer
+![AppMate](http://s17.mogucdn.com/new1/v1/fxihe/d0da31c875767324becb9e575f68fd34/A1c0b9eca4d2000802.appmate.png)
+
+## AppMateServer
 
 这是 [AppMate](http://s17.mogucdn.com/new1/v1/fxihe/d0da31c875767324becb9e575f68fd34/A1c0b9eca4d2000802.appmate.png) 的服务端。
 
@@ -9,7 +11,7 @@ AppMateServer
 * [AppMateClient](https://github.com/c98/AppMateClient)
 * [AppMateBrowser](https://github.com/c98/AppMateBrowser)
 
-### 前置说明
+## 前置说明
 AppMate 其实是我们小组内部的一个尝试，正式服务的 server 端是用 Nodejs 实现的。用 swift 重写这个项目的核心框架主要是想确认下知名 swift web 框架 [Perfect](https://github.com/PerfectlySoft/Perfect) 的使用手感和稳定性到底如何。其中 websocket 组件是基于官方 [PerfectlySoft/Perfect-WebSockets](https://github.com/PerfectlySoft/Perfect-WebSockets) 自行定制的 Event-Driven 版本，[Pull Request 见此](https://github.com/PerfectlySoft/Perfect-WebSockets/pull/1)。
 
 尝试这个项目另外一点，其实也想知道使用 swift 可以做到什么程度，以及对比其他 server 端(e.g. Nodejs)的优劣势。

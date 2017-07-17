@@ -273,7 +273,7 @@ class Session: ModuleProtocol {
 			let did = sessionIdComps[0]
 			let appName = sessionIdComps[1]
 			let appVersion = sessionIdComps[2]
-			self.sessions.append(SessionElement(session_id: sessionId,
+			self.sessions.insert(SessionElement(session_id: sessionId,
 			                                    device_name: deviceName,
 			                                    did: did,
 			                                    app_name: appName,
@@ -282,7 +282,7 @@ class Session: ModuleProtocol {
 			                                    os_version: osVersion,
 			                                    connect_time: connectTime,
 			                                    connect_status: 1,
-			                                    socket: socket))
+			                                    socket: socket), at: 0)
 		}
 		
 		try? self.saveSessions()

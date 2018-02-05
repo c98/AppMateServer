@@ -9,25 +9,10 @@
 import Foundation
 import PerfectWebSockets
 
-protocol ModuleProtocol {
+protocol ModuleProtocol: AnyObject {
 	func handleEvent(socket: WebSocket, action: String, topic: String,
 	                 sessionId: String, message: [String: Any])
 }
-
-/// 因为 ModuleProtocol 并不直接支持比较，这里增加该类型的全局比较操作
-func ==(_ lhs: ModuleProtocol, _ rhs: ModuleProtocol) -> Bool {
-	let l_p = Unmanaged<AnyObject>.passUnretained(lhs as AnyObject).toOpaque()
-	let r_p = Unmanaged<AnyObject>.passUnretained(rhs as AnyObject).toOpaque()
-	return l_p == r_p
-}
-
-/// 因为 WebSocket 并不直接支持比较，这里增加该类型的全局比较操作
-func ==(_ lhs: WebSocket, _ rhs: WebSocket) -> Bool {
-	let l_p = Unmanaged<AnyObject>.passUnretained(lhs as AnyObject).toOpaque()
-	let r_p = Unmanaged<AnyObject>.passUnretained(rhs as AnyObject).toOpaque()
-	return l_p == r_p
-}
-
 
 /// 消息发布中心
 class PublishCenter {
@@ -47,7 +32,7 @@ class PublishCenter {
 			modules = [ModuleProtocol]();
 		}
 		
-		if (modules?.index(where: { $0 == module })) == nil {
+		if (modules?.index(where: { $0 === module })) == nil {
 			modules?.append(module)
 			self.topicTable[topic] = modules
 		}
@@ -60,7 +45,7 @@ class PublishCenter {
 			return
 		}
 		
-		guard let index = modules.index(where: { $0 == module }) else {
+		guard let index = modules.index(where: { $0 === module }) else {
 			return
 		}
 		
